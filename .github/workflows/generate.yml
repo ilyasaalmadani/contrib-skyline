@@ -2,17 +2,34 @@ name: Generate Skyline
 
 on:
   workflow_dispatch:
+    inputs:
+      username:
+        description: 'GitHub username'
+        required: false
+        default: 'ilyasaalmadani'
   schedule:
-    - cron: '0 0 * * *'  # daily (disabled until real data is ready)
+    - cron: '0 2 * * *'  # daily at 02:00 UTC
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Generate sample skylines
+
+      - name: Generate skylines
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.event.inputs.username || 'ilyasaalmadani' }}
         run: python3 src/generate_skyline.py
-      # Future: commit and push generated SVGs when real data is integrated
+
+      - name: Commit generated SVGs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate contribution skylines"
+          file_pattern: examples/*.svg
