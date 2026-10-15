@@ -37,16 +37,15 @@ Most contribution graphs are flat grids.
 ### Neon
 ![Neon](examples/skyline-neon.svg)
 
-### Synthwave
-![Synthwave](examples/skyline-synthwave.svg)
+### Dark
+![Dark](examples/skyline-dark.svg)
 
-### Matrix
-![Matrix](examples/skyline-matrix.svg)
-
-### Sakura
-![Sakura](examples/skyline-sakura.svg)
+### Ocean
+![Ocean](examples/skyline-ocean.svg)
 
 </div>
+
+> Run `python3 src/generate_skyline.py` to generate all 6 themes (including Synthwave, Matrix, Sakura) into the `examples/` folder.
 
 ## Quick Start
 
