@@ -1,18 +1,18 @@
 # contrib-skyline
 
-> Transform your GitHub contribution graph into a stunning isometric skyline.  
-> Novel, customizable, and ready for your profile README.
+> Turn your GitHub contribution graph into a living isometric skyline.  
+> Clean SVG. Multiple themes. Zero dependencies. Ready for your profile README.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Stars](https://img.shields.io/github/stars/ilyasaalmadani/contrib-skyline?style=social)](https://github.com/ilyasaalmadani/contrib-skyline)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilyasaalmadani/contrib-skyline/pulls)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Stars](https://img.shields.io/github/stars/ilyasaalmadani/contrib-skyline?style=social)](https://github.com/ilyasaalmadani/contrib-skyline/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 <div align="center">
 
-**Your code. Your city. Your skyline.**
+### Your code. Your city. Your skyline.
 
-[Examples](#examples) · [Quick Start](#quick-start) · [Themes](#themes) · [Contribute](#contributing)
+[Quick Start](#quick-start) · [Themes](#themes) · [Examples](#examples) · [Roadmap](#roadmap)
 
 </div>
 
@@ -20,82 +20,92 @@
 
 ## Why contrib-skyline?
 
-Most contribution visualizations are flat grids or simple charts.  
-**contrib-skyline** turns your activity into a living isometric city — each week a building, each contribution a lit window.
+Most contribution graphs are flat grids.  
+**contrib-skyline** turns the same data into a 3D isometric city — each week becomes a building, and activity lights up the windows.
 
-- **Novel isometric rendering** with customizable height curves
-- **Multiple professional themes** (Neon, Dark, Ocean, and more)
-- **Zero-dependency SVG output** perfect for READMEs
-- **Sample data generator** so you can preview instantly
-- **Designed for GitHub profiles** — drop in and impress
+- Isometric skyline with proper depth and glow
+- 6 ready-to-use themes (Neon, Dark, Ocean, Synthwave, Matrix, Sakura)
+- Pure SVG output — no external services, works forever in READMEs
+- Sample data generator so you can preview instantly
+- Stats overlay (total contributions, active days, longest streak)
 
 ## Examples
 
-### Neon Theme
-![Neon Skyline](examples/skyline-neon.svg)
+<div align="center">
 
-### Dark Theme (GitHub-native)
-![Dark Skyline](examples/skyline-dark.svg)
+### Neon
+![Neon](examples/skyline-neon.svg)
 
-### Ocean Theme
-![Ocean Skyline](examples/skyline-ocean.svg)
+### Synthwave
+![Synthwave](examples/skyline-synthwave.svg)
+
+### Matrix
+![Matrix](examples/skyline-matrix.svg)
+
+### Sakura
+![Sakura](examples/skyline-sakura.svg)
+
+</div>
 
 ## Quick Start
 
 ```bash
-# Clone and generate samples
 git clone https://github.com/ilyasaalmadani/contrib-skyline.git
 cd contrib-skyline
 python3 src/generate_skyline.py
 ```
 
-The script generates three themed SVGs in `examples/`.
+This generates all themes into the `examples/` folder.
 
-### Embed in your README
+### Embed in your profile README
 
 ```markdown
 ![My Skyline](https://raw.githubusercontent.com/ilyasaalmadani/contrib-skyline/main/examples/skyline-neon.svg)
 ```
 
-Or use the generated files from your own fork after connecting real data.
+Or generate your own and host it in your profile repository.
+
+## Themes
+
+| Theme       | Style              | Best for          |
+|-------------|---------------|-------------------|
+| neon        | Cyberpunk green    | Dark profiles     |
+| dark        | GitHub-native      | Classic look      |
+| ocean       | Cool blues         | Calm aesthetic    |
+| synthwave   | Pink / purple      | Retro-futuristic  |
+| matrix      | Green on black     | Terminal vibe     |
+| sakura      | Soft pink          | Soft / elegant    |
 
 ## Features
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| Isometric Skyline | ✅ | Week-based buildings with window density |
-| Multiple Themes | ✅ | Neon, Dark, Ocean (more coming) |
-| SVG Output | ✅ | Scalable, lightweight, GitHub-friendly |
-| Sample Generator | ✅ | Realistic activity simulation |
-| GitHub Action | 🚧 | Auto-update your skyline daily |
-| Real Data Fetch | 🚧 | GraphQL integration planned |
-| Custom Themes | 🚧 | User-defined color palettes |
-
-## How It Works
-
-1. Contribution data is grouped into weekly totals
-2. Building height scales with activity (logarithmic for balance)
-3. Windows are rendered proportional to daily intensity
-4. Isometric projection creates the 3D skyline effect
-5. Themes control colors, glow, and atmosphere
+| Feature              | Status | Notes                                      |
+|----------------------|--------|--------------------------------------------|
+| Isometric Skyline    | ✅     | Week-based buildings with window lighting  |
+| 6 Themes             | ✅     | Easy to extend                             |
+| Pure SVG             | ✅     | Lightweight and GitHub-friendly            |
+| Sample Generator     | ✅     | Realistic activity simulation              |
+| Stats Overlay        | ✅     | Total, active days, longest streak         |
+| Real GitHub Data     | 🚧     | GraphQL integration planned                |
+| GitHub Action        | 🚧     | Daily auto-regeneration planned            |
+| Custom Themes        | 🚧     | User-defined palettes                      |
 
 ## Roadmap
 
-- [ ] Real GitHub GraphQL data fetching
-- [ ] GitHub Action for automatic daily updates
-- [ ] More themes (Synthwave, Matrix, Sakura)
-- [ ] Interactive web demo
-- [ ] Stats overlay (streaks, total, busiest week)
-- [ ] Multi-year comparison
+- [ ] Fetch real contribution data via GitHub GraphQL
+- [ ] GitHub Action that regenerates SVGs daily
+- [ ] Interactive web preview / theme builder
+- [ ] Multi-year comparison view
+- [ ] Animation support (CSS / SMIL)
+- [ ] CLI flags (`--username`, `--theme`, `--year`)
 
 ## Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-1. Fork the repo
+1. Fork the repository
 2. Create a feature branch
-3. Add your theme or improvement
-4. Open a PR
+3. Add a theme or improvement
+4. Open a pull request
 
 ## License
 
@@ -105,8 +115,8 @@ MIT © [Ilyas Akbar Almadani](https://github.com/ilyasaalmadani)
 
 <div align="center">
 
-**Built with care by a senior engineer who believes visualizations should make data beautiful.**
+**Built for developers who want their contribution graph to look as good as the code behind it.**
 
-⭐ Star this repo if you like the skyline — it helps it grow taller.
+⭐ Star the repo if you like the skyline — it helps it grow.
 
 </div>
