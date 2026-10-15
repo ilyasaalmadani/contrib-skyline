@@ -26,8 +26,9 @@ Most contribution graphs are flat grids.
 - Isometric skyline with proper depth and glow
 - 6 ready-to-use themes (Neon, Dark, Ocean, Synthwave, Matrix, Sakura)
 - Pure SVG output — no external services, works forever in READMEs
-- Sample data generator so you can preview instantly
+- **Real GitHub data** via GraphQL (falls back to sample if no token)
 - Stats overlay (total contributions, active days, longest streak)
+- GitHub Action ready for daily auto-generation
 
 ## Examples
 
@@ -55,7 +56,15 @@ cd contrib-skyline
 python3 src/generate_skyline.py
 ```
 
-This generates all themes into the `examples/` folder.
+This generates all themes into the `examples/` folder using sample data.
+
+### Use your real contribution data
+
+```bash
+export GITHUB_USERNAME=yourname
+export GITHUB_TOKEN=ghp_xxxxxxxx   # needs read:user or public_repo scope
+python3 src/generate_skyline.py
+```
 
 ### Embed in your profile README
 
@@ -85,14 +94,14 @@ Or generate your own and host it in your profile repository.
 | Pure SVG             | ✅     | Lightweight and GitHub-friendly            |
 | Sample Generator     | ✅     | Realistic activity simulation              |
 | Stats Overlay        | ✅     | Total, active days, longest streak         |
-| Real GitHub Data     | 🚧     | GraphQL integration planned                |
-| GitHub Action        | 🚧     | Daily auto-regeneration planned            |
-| Custom Themes        | 🚧     | User-defined palettes                      |
+| Real GitHub Data     | ✅     | GraphQL + automatic sample fallback        |
+| GitHub Action        | ✅     | Daily generation + auto-commit ready       |
+| Custom Themes        | 🚧     | Easy to add (edit THEMES dict)             |
 
 ## Roadmap
 
-- [ ] Fetch real contribution data via GitHub GraphQL
-- [ ] GitHub Action that regenerates SVGs daily
+- [x] Fetch real contribution data via GitHub GraphQL
+- [x] GitHub Action that regenerates SVGs daily
 - [ ] Interactive web preview / theme builder
 - [ ] Multi-year comparison view
 - [ ] Animation support (CSS / SMIL)
