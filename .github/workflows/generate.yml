@@ -1,0 +1,18 @@
+name: Generate Skyline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # daily (disabled until real data is ready)
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate sample skylines
+        run: python3 src/generate_skyline.py
+      # Future: commit and push generated SVGs when real data is integrated
