@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <rect width="100%" height="100%" fill="#161b22"/>
+  <polygon points="100,500 1100,500 1000,550 200,550" fill="#0d1117"/>
+  <rect x="300" y="300" width="30" height="180" fill="#39d353" opacity="0.85"/>
+  <rect x="350" y="250" width="30" height="230" fill="#39d353" opacity="0.85"/>
+  <rect x="400" y="320" width="30" height="160" fill="#39d353" opacity="0.85"/>
+  <rect x="450" y="200" width="30" height="280" fill="#39d353" opacity="0.85"/>
+  <rect x="500" y="280" width="30" height="200" fill="#39d353" opacity="0.85"/>
+  <rect x="550" y="340" width="30" height="140" fill="#39d353" opacity="0.85"/>
+  <rect x="600" y="220" width="30" height="260" fill="#39d353" opacity="0.85"/>
+  <rect x="650" y="310" width="30" height="170" fill="#39d353" opacity="0.85"/>
+  <rect x="700" y="260" width="30" height="220" fill="#39d353" opacity="0.85"/>
+  <text x="50" y="50" fill="#c9d1d9" font-family="monospace" font-size="24" font-weight="bold">contrib-skyline</text>
+  <text x="50" y="80" fill="#c9d1d9" font-family="monospace" font-size="14">Isometric GitHub Contribution Skyline — Dark Theme</text>
+</svg>
